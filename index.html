@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/icon-dollar.svg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Splitter | The Tip Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <img src="./images/logo.svg" alt="Logo" />
+        </div>
+      </header>
+      <main class="card">
+        <!-- Left section -->
+        <div class="left-section">
+          <div class="bill-container flex-col">
+            <label for="bill">Bill</label>
+            <img src="./images/icon-dollar.svg" alt="dollar-icon" />
+            <input
+              id="bill"
+              type="number"
+              placeholder="0"
+              step="100"
+              class="form-control"
+            />
+          </div>
+          <div class="select-tip-container flex-col">
+            <label for="select-tip">Select Tip %</label>
+            <div class="grid grid-col-3">
+              <button data-value="5" class="percent-btn">5%</button>
+              <button data-value="10" class="percent-btn">10%</button>
+              <button data-value="15" class="percent-btn">15%</button>
+              <button data-value="25" class="percent-btn">25%</button>
+              <button data-value="50" class="percent-btn">50%</button>
+              <input
+                id="custom"
+                type="number"
+                placeholder="Custom"
+                class="custom"
+              />
+            </div>
+          </div>
+          <div class="people-container flex-col">
+            <label for="number-of-people">Number of People</label>
+            <img src="./images/icon-person.svg" alt="user-icon" />
+            <input
+              type="number"
+              placeholder="0"
+              id="people"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <!-- End of left section -->
+
+        <!-- Right Section -->
+        <div class="right-section">
+          <div>
+            <div class="tip-amount-container flex">
+              <div class="label flex-col">
+                <label for="tip-amount">Tip Amount</label>
+                <label for="tip-amount">/ person</label>
+              </div>
+              <h1 id="tip" class="tip-amount">$0.00</h1>
+            </div>
+            <div class="total-amount-container flex">
+              <div class="label flex-col">
+                <label for="tip-amount">Total</label>
+                <label for="tip-amount">/ person</label>
+              </div>
+              <h1 id="total" class="total-per-person">$0.00</h1>
+            </div>
+          </div>
+          <button id="reset" class="reset-btn">Reset</button>
+        </div>
+        <!-- End of right section -->
+      </main>
+      <footer>
+        <p>
+          A challenge from
+          <a href="https://www.frontendmentor.io" target="_blank"
+            >Frontend Mentor</a
+          ><br />
+          by
+          <a href="#" target="_blank"
+            ><i class="bx bxl-github bx-fixed"></i>rawmayo</a
+          >
+        </p>
+      </footer>
+    </div>
+    <script src="./js/index.js" defer></script>
+  </body>
+</html>

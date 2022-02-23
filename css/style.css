@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+:root {
+  --primary-color: hsl(172, 67%, 45%);
+  --vd-cyan: hsl(183, 100%, 15%);
+  --dg1-cyan: hsl(186, 14%, 43%);
+  --dg2-cyan: hsl(184, 14%, 56%);
+  --lg1-cyan: hsl(185, 41%, 84%);
+  --lg2-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.form-control {
+  text-align: right;
+  padding: 0.2rem 0.5rem;
+  font-weight: bold;
+  color: var(--vd-cyan);
+  border: none;
+  border-radius: 2px;
+  background-color: var(--lg2-cyan);
+  cursor: pointer;
+}
+
+.form-control:focus {
+  outline-color: var(--primary-color);
+}
+
+.form-control::placeholder {
+  color: var(--dg2-cyan);
+}
+
+.grid-col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+body {
+  background-color: var(--lg1-cyan);
+  color: var(--dg1-cyan);
+}
+
+.logo img {
+  margin: 4rem 0 2rem 0;
+  width: 55px;
+}
+
+.card {
+  background-color: var(--white);
+  display: grid;
+  width: 500px;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card label {
+  font-size: 0.5em;
+  font-weight: bold;
+}
+
+.right-section {
+  background-color: var(--vd-cyan);
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-section {
+  padding: 0.5rem;
+}
+
+.percent-btn,
+.custom {
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  padding: 0.2rem 0;
+  border-radius: 3px;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.select-tip-container {
+  margin: 1rem 0;
+}
+
+.select-tip-container label {
+  margin-bottom: 0.5rem;
+}
+
+.bill-container,
+.people-container {
+  position: relative;
+}
+
+.bill-container img,
+.people-container img {
+  position: absolute;
+  left: 0.5rem;
+  bottom: 20%;
+  width: 0.4rem;
+}
+
+.percent-btn {
+  background-color: var(--vd-cyan);
+  transition: 0.2s;
+}
+
+.percent-btn:hover,
+.selected-percent {
+  background-color: var(--primary-color);
+  color: var(--vd-cyan);
+}
+
+.custom {
+  background-color: var(--lg2-cyan);
+  text-align: right;
+  color: var(--vd-cyan);
+  padding: 0 0.5rem;
+}
+
+.custom:focus {
+  outline-color: var(--primary-color);
+}
+
+.custom::placeholder {
+  color: var(--dg2-cyan);
+  text-align: center;
+}
+
+.label > label:nth-child(1) {
+  color: var(--white);
+}
+
+.tip-amount,
+.total-per-person {
+  color: var(--primary-color);
+  font-size: 1.4em;
+}
+
+.reset-btn {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 0.3rem 0;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: var(--vd-cyan);
+  width: 100%;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.reset-btn:hover {
+  transform: scale(0.99);
+}
+
+footer {
+  margin: 4rem 0 2rem 0;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  background-color: var(--vd-cyan);
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+}
+
+/* Media Query */
+@media screen and (max-width: 499px) {
+  .container {
+    width: 100%;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .right-section {
+    height: 170px;
+  }
+}
